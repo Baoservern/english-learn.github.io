@@ -294,6 +294,7 @@ const grammarTopics = {
                     <li><strong>Ações concluídas no passado:</strong> I went to the movies yesterday.</li>
                     <li><strong>Hábitos passados:</strong> When I was young, I played soccer every day.</li>
                     <li><strong>Sequência de eventos:</strong> I woke up, had breakfast, and went to work.</li>
+                    <li><strong>Estados passados:</strong> She was happy yesterday.</li>
                 </ul>
             `,
             rules: `
@@ -304,6 +305,7 @@ const grammarTopics = {
                     <div class="examples">
                         <p><span class="example">✅ I walked to school.</span></p>
                         <p><span class="example">✅ She studied all night.</span></p>
+                        <p><span class="example">✅ They worked hard.</span></p>
                     </div>
                 </div>
                 
@@ -314,6 +316,7 @@ const grammarTopics = {
                         <p><span class="example">✅ I went (go → went)</span></p>
                         <p><span class="example">✅ She ate (eat → ate)</span></p>
                         <p><span class="example">✅ They came (come → came)</span></p>
+                        <p><span class="example">✅ He saw (see → saw)</span></p>
                     </div>
                 </div>
                 
@@ -321,12 +324,77 @@ const grammarTopics = {
                     <h4>Negativa e Interrogativa</h4>
                     <p>Usamos <strong>did/didn't</strong> + verbo base</p>
                     <div class="examples">
-                        <p><span class="example">✅ I didn't go to the party.</span></p>
-                        <p><span class="example">✅ Did you see the movie?</span></p>
+                        <p><span class="example">❌ I didn't go to the party.</span></p>
+                        <p><span class="example">❓ Did you see the movie?</span></p>
+                        <p><span class="example">❌ She didn't study yesterday.</span></p>
+                    </div>
+                </div>
+            `,
+            examples: `
+                <h3>💡 Exemplos Práticos</h3>
+                <div class="examples-grid">
+                    <div class="example-card positive">
+                        <h4>Afirmativas</h4>
+                        <ul>
+                            <li>I visited my grandmother last week.</li>
+                            <li>She finished her homework.</li>
+                            <li>We had dinner at 7 PM.</li>
+                            <li>He bought a new car.</li>
+                        </ul>
+                    </div>
+                    <div class="example-card negative">
+                        <h4>Negativas</h4>
+                        <ul>
+                            <li>I didn't watch TV yesterday.</li>
+                            <li>She didn't come to the party.</li>
+                            <li>They didn't finish the project.</li>
+                            <li>We didn't see the movie.</li>
+                        </ul>
+                    </div>
+                    <div class="example-card question">
+                        <h4>Perguntas</h4>
+                        <ul>
+                            <li>Did you sleep well?</li>
+                            <li>Where did she go?</li>
+                            <li>What did they eat?</li>
+                            <li>When did he arrive?</li>
+                        </ul>
                     </div>
                 </div>
             `
-        }
+        },
+        quiz: [
+            {
+                question: "Qual é a forma correta do verbo 'play' no passado para 'I'?",
+                options: ["I play", "I played", "I playing", "I was play"],
+                correct: "I played",
+                explanation: "'Play' é um verbo regular, então adiciona-se -ed: played."
+            },
+            {
+                question: "Como se forma a negativa no Past Simple?",
+                options: ["Sujeito + verbo-ed + not", "Sujeito + didn't + verbo base", "Sujeito + not + verbo-ed", "Sujeito + don't + verbo-ed"],
+                correct: "Sujeito + didn't + verbo base",
+                explanation: "A negativa no Past Simple usa 'didn't' + verbo na forma base."
+            },
+            {
+                question: "Qual é a forma passada correta de 'go'?",
+                options: ["goed", "went", "gone", "going"],
+                correct: "went",
+                explanation: "'Go' é um verbo irregular, sua forma passada é 'went'."
+            },
+            {
+                question: "Complete: 'She ___ to the store yesterday.'",
+                options: ["go", "goes", "went", "going"],
+                correct: "went",
+                explanation: "Para ações passadas usamos a forma do Past Simple: 'went'."
+            },
+            {
+                question: "Qual pergunta está correta?",
+                options: ["Did you saw the movie?", "You saw the movie?", "Did you see the movie?", "Do you saw the movie?"],
+                correct: "Did you see the movie?",
+                explanation: "Em perguntas no Past Simple, usamos 'did' + verbo base."
+            }
+        ]
     },
     'future-forms': {
         title: 'Future Forms',
