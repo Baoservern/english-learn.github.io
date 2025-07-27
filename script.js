@@ -261,6 +261,24 @@ const grammarTopics = {
                 options: ["She working now", "She is working now", "She does working now", "She work now"],
                 correct: "She is working now",
                 explanation: "Precisamos do verbo 'is' antes de 'working' no Present Continuous."
+            },
+            {
+                question: "Quando usamos o Present Continuous?",
+                options: ["Para hábitos", "Para ações acontecendo agora", "Para fatos gerais", "Para ações passadas"],
+                correct: "Para ações acontecendo agora",
+                explanation: "O Present Continuous é usado principalmente para ações em progresso no momento da fala."
+            },
+            {
+                question: "Qual é a forma negativa correta?",
+                options: ["I am not working", "I not working", "I don't working", "I am not work"],
+                correct: "I am not working",
+                explanation: "A negativa do Present Continuous usa am/is/are + not + verbo(-ing)."
+            },
+            {
+                question: "Complete: 'They ___ dinner right now.'",
+                options: ["are eating", "eat", "eating", "is eating"],
+                correct: "are eating",
+                explanation: "Para 'they' usamos 'are' + verbo com -ing."
             }
         ]
     },
