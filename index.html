@@ -3,49 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprenda Inglês - Presente Simples</title>
+    <title>English Learning Hub - Aprenda Inglês de Forma Divertida</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Aprenda Inglês</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Tópicos</a>
-            <a href="#">Progresso</a>
-            <a href="#">Recursos</a>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>English Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#gramatica" class="nav-link">Gramática</a></li>
+                <li><a href="#vocabulario" class="nav-link">Vocabulário</a></li>
+                <li><a href="#atividades" class="nav-link">Atividades</a></li>
+                <li><a href="#progresso" class="nav-link">Progresso</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <main>
-        <section class="content">
-            <h2>Presente Simples</h2>
-            <p>O <strong>Presente Simples</strong> é usado para falar de hábitos, fatos gerais e rotinas.</p>
-            <h3>Regras</h3>
-            <ul>
-                <li><strong>Estrutura</strong>: Sujeito + Verbo (adiciona -s na 3ª pessoa singular: he, she, it).</li>
-                <li><strong>Exemplo</strong>: I work every day. / She works at a bank.</li>
-                <li><strong>Negativas</strong>: Sujeito + do/does + not + verbo. Ex.: I don't like coffee.</li>
-                <li><strong>Perguntas</strong>: Do/Does + sujeito + verbo? Ex.: Do you play soccer?</li>
-            </ul>
-            <h3>Exemplos Práticos</h3>
-            <p>Ouça o áudio (adicione um arquivo MP3 aqui): "She walks to school every morning."</p>
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Aprenda Inglês de Forma
+                        <span class="gradient-text">Divertida</span>
+                    </h1>
+                    <p class="hero-subtitle">Domine o inglês básico ao intermediário com atividades interativas, gramática essencial e vocabulário organizado por temas.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-book"></i>
+                            <span>15+ Tópicos</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span>100+ Atividades</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Sistema de Conquistas</span>
+                        </div>
+                    </div>
+                    <button class="cta-button" onclick="navigateToSection('gramatica')">
+                        Começar Agora <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card">
+                        <i class="fas fa-language"></i>
+                        <span>English</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" onclick="navigateToSection('gramatica')">
+                    <div class="feature-icon grammar">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <h3>Gramática Essencial</h3>
+                    <p>Aprenda os 10 tópicos mais importantes da gramática inglesa com explicações claras e exemplos práticos.</p>
+                    <div class="feature-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                        <span>2/10 concluídos</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" onclick="navigateToSection('vocabulario')">
+                    <div class="feature-icon vocabulary">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Vocabulário Temático</h3>
+                    <p>Expanda seu vocabulário com mais de 500 palavras organizadas por temas do dia a dia.</p>
+                    <div class="feature-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 5%"></div>
+                        </div>
+                        <span>25/500 palavras</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" onclick="navigateToSection('atividades')">
+                    <div class="feature-icon activities">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Atividades Interativas</h3>
+                    <p>Pratique com jogos divertidos: quiz, matching, flashcards e muito mais para fixar o aprendizado.</p>
+                    <div class="feature-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%"></div>
+                        </div>
+                        <span>15/100 atividades</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="quiz">
-            <h3>Teste seus Conhecimentos</h3>
-            <div id="quiz-container">
-                <p id="question"></p>
-                <div id="options"></div>
-                <button id="submit-btn">Enviar Resposta</button>
-                <p id="feedback"></p>
+        <!-- GRAMÁTICA SECTION -->
+        <section id="gramatica" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-spell-check"></i> Gramática Essencial</h2>
+                <p>Domine os fundamentos da gramática inglesa com explicações claras e exercícios práticos</p>
+            </div>
+
+            <div class="topics-grid">
+                <div class="topic-card essential" data-topic="present-simple">
+                    <div class="topic-badge">Essencial</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Present Simple</h3>
+                    <p>Ações habituais, fatos e rotinas do dia a dia</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle completed">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>Concluído</span>
+                    </div>
+                </div>
+
+                <div class="topic-card essential" data-topic="present-continuous">
+                    <div class="topic-badge">Essencial</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3>Present Continuous</h3>
+                    <p>Ações acontecendo agora ou planejadas</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+
+                <div class="topic-card essential" data-topic="past-simple">
+                    <div class="topic-badge">Essencial</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Past Simple</h3>
+                    <p>Ações concluídas no passado</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+
+                <div class="topic-card important" data-topic="future-forms">
+                    <div class="topic-badge">Importante</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-forward"></i>
+                    </div>
+                    <h3>Future Forms</h3>
+                    <p>Will, going to e present continuous para futuro</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+
+                <div class="topic-card important" data-topic="present-perfect">
+                    <div class="topic-badge">Importante</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Present Perfect</h3>
+                    <p>Ações passadas com conexão ao presente</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+
+                <div class="topic-card essential" data-topic="modal-verbs">
+                    <div class="topic-badge">Essencial</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Modal Verbs</h3>
+                    <p>Can, could, must, should, might, may</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+
+                <div class="topic-card helpful" data-topic="question-words">
+                    <div class="topic-badge">Útil</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <h3>Question Words</h3>
+                    <p>What, where, when, why, how, who</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+
+                <div class="topic-card helpful" data-topic="comparatives">
+                    <div class="topic-badge">Útil</div>
+                    <div class="topic-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Comparatives</h3>
+                    <p>Comparações entre pessoas, lugares e coisas</p>
+                    <div class="topic-progress">
+                        <div class="progress-circle">
+                            <span>0%</span>
+                        </div>
+                        <span>Iniciar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic Content Area -->
+            <div id="topic-content" class="topic-content hidden">
+                <button class="back-button" onclick="showTopicsGrid()">
+                    <i class="fas fa-arrow-left"></i> Voltar aos Tópicos
+                </button>
+                <div id="topic-details"></div>
+            </div>
+        </section>
+
+        <!-- VOCABULÁRIO SECTION -->
+        <section id="vocabulario" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> Vocabulário Temático</h2>
+                <p>Expanda seu vocabulário com palavras organizadas por temas do dia a dia</p>
+            </div>
+
+            <div class="vocab-categories">
+                <div class="vocab-card" data-category="family">
+                    <div class="vocab-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Família</h3>
+                    <p>35 palavras</p>
+                    <div class="vocab-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                        <span>7/35 aprendidas</span>
+                    </div>
+                </div>
+
+                <div class="vocab-card" data-category="professions">
+                    <div class="vocab-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Profissões</h3>
+                    <p>40 palavras</p>
+                    <div class="vocab-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span>0/40 aprendidas</span>
+                    </div>
+                </div>
+
+                <div class="vocab-card" data-category="food">
+                    <div class="vocab-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Comida</h3>
+                    <p>60 palavras</p>
+                    <div class="vocab-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%"></div>
+                        </div>
+                        <span>6/60 aprendidas</span>
+                    </div>
+                </div>
+
+                <div class="vocab-card" data-category="house">
+                    <div class="vocab-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Casa</h3>
+                    <p>45 palavras</p>
+                    <div class="vocab-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <span>11/45 aprendidas</span>
+                    </div>
+                </div>
+
+                <div class="vocab-card" data-category="travel">
+                    <div class="vocab-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Viagem</h3>
+                    <p>50 palavras</p>
+                    <div class="vocab-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span>0/50 aprendidas</span>
+                    </div>
+                </div>
+
+                <div class="vocab-card" data-category="emotions">
+                    <div class="vocab-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Emoções</h3>
+                    <p>30 palavras</p>
+                    <div class="vocab-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%"></div>
+                        </div>
+                        <span>4/30 aprendidas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATIVIDADES SECTION -->
+        <section id="atividades" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-puzzle-piece"></i> Atividades Interativas</h2>
+                <p>Pratique e fixe seu aprendizado com jogos e exercícios divertidos</p>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity-card" data-activity="quiz">
+                    <div class="activity-icon quiz">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Quiz Interativo</h3>
+                    <p>Teste seus conhecimentos com perguntas de múltipla escolha</p>
+                    <button class="activity-button">Começar Quiz</button>
+                </div>
+
+                <div class="activity-card" data-activity="matching">
+                    <div class="activity-icon matching">
+                        <i class="fas fa-grip-horizontal"></i>
+                    </div>
+                    <h3>Jogo da Memória</h3>
+                    <p>Combine palavras com suas traduções ou definições</p>
+                    <button class="activity-button">Jogar</button>
+                </div>
+
+                <div class="activity-card" data-activity="flashcards">
+                    <div class="activity-icon flashcards">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Flashcards</h3>
+                    <p>Revise vocabulário com cartões interativos</p>
+                    <button class="activity-button">Estudar</button>
+                </div>
+
+                <div class="activity-card" data-activity="fill-blanks">
+                    <div class="activity-icon fill">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Complete a Frase</h3>
+                    <p>Preencha as lacunas com as palavras corretas</p>
+                    <button class="activity-button">Praticar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESSO SECTION -->
+        <section id="progresso" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Seu Progresso</h2>
+                <p>Acompanhe sua evolução no aprendizado de inglês</p>
+            </div>
+
+            <div class="progress-dashboard">
+                <div class="progress-card overall">
+                    <h3>Progresso Geral</h3>
+                    <div class="circular-progress">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="#e6e6e6" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                            <circle class="progress-ring-fill" stroke="#4CAF50" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 261.38;"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="progress-percentage">20%</span>
+                            <span class="progress-label">Concluído</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>3</h4>
+                            <p>Conquistas</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>7</h4>
+                            <p>Dias de Sequência</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>2/10</h4>
+                            <p>Tópicos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-vocabulary"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>28</h4>
+                            <p>Palavras</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>Conquistas Recentes</h3>
+                <div class="achievements-list">
+                    <div class="achievement earned">
+                        <i class="fas fa-medal"></i>
+                        <div class="achievement-info">
+                            <h4>Primeiro Passo</h4>
+                            <p>Complete sua primeira lição</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement earned">
+                        <i class="fas fa-star"></i>
+                        <div class="achievement-info">
+                            <h4>Quiz Master</h4>
+                            <p>Acerte 5 perguntas seguidas</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement locked">
+                        <i class="fas fa-lock"></i>
+                        <div class="achievement-info">
+                            <h4>Vocabulário Expert</h4>
+                            <p>Aprenda 50 palavras novas</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Aprenda Inglês. Todos os direitos reservados.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
